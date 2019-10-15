@@ -1,0 +1,3 @@
+SELECT COUNT(id_member) AS movies FROM `member_history`
+WHERE DATE(`date`) BETWEEN '2006/10/30' AND '2007/07/27'
+OR (DATE_FORMAT(`date`, '%m') = 12 AND DATE_FORMAT(`date`, '%d') = 24);
