@@ -1,0 +1,172 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.center {
+	text-align: center;
+}
+.over_hidden {
+	overflow: hidden;
+	float:both;
+}
+.box {
+	margin: 0 auto;
+	width: 1200px;
+	height: 100%;
+}
+.padding {
+	padding-top: 50px;
+}
+h1, h2,h3,h4,h5,h6 {
+	font-family:  Verdana;
+	font-weight: 200;
+	margin: 0;
+	padding: 0;
+}
+/*header-basket*/
+.hidden {
+	display: none;
+}
+header {
+	border-bottom: 1px solid silver;
+}
+header a {
+	color: black;
+}
+.buttons a {
+	font-size: 13px;
+	color:#330033;
+}
+
+.login {
+	width: 100px;
+	margin-bottom: 5px;
+}
+.registration {
+	width: 100px;
+}
+
+/*first*/
+.header {
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(img/back_header.jpg)  center center no-repeat;
+	background-size: cover;
+	background-color: ;
+	height: 600px;
+	margin: 0;
+	padding: 0;
+}
+.logo h4  {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	font-size: 35px;
+	float: left;
+	font-family: Montserrat;
+	border:1px dotted grey;
+}
+.buttons {
+	float:right;
+	padding-top: 25px;
+	padding-left: 10px;
+}
+.basket {
+	float:right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.headline {
+	text-align: center;
+	color:white;
+	padding-top: 20%;
+	font-size: 60px;
+}
+
+
+/*category*/
+.box_categories {
+	width: 100%;
+	text-align: center;
+}
+h2 {
+	padding-top: 30px;
+	font-size: 35px;
+}
+.category {
+	width: 30%;
+	padding-top: 20px;
+	float:left;
+	padding-right: 1%;
+	padding-left: 1%;
+}
+.category img {
+	width: 100%;
+}
+.category h3 {
+	padding-top: 20px;
+	color: black;
+}
+.category_powerbanks {
+	
+}
+
+
+
+/*sidebar*/
+
+.sidebar {
+	width: 25%;
+	border:1px solid silver;
+	margin-top: 70px;
+	float:left;
+}
+.section_goods {
+	width: 70%;
+	margin-top: 70px;
+	float: right;
+}
+.sidebar h5 {
+	font-size: 22px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.sidebar .item {
+	padding-top: 15px;
+	padding-bottom: 15px;	
+}
+.sidebar a {
+	text-decoration: none;
+	color: grey;
+}
+
+/*goods*/
+.goods_item {
+	text-align: center;
+	float:left;
+	width: 33%;
+}
+.goods_item h4 {
+	padding-top: 40px;
+}
+.goods_item button {
+	width: 100px;
+	height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
