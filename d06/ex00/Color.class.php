@@ -29,11 +29,6 @@ class Color
 		if (Color::$verbose === TRUE)
 			print($this . " constructed.\n");
 	}
-	public function __destruct()
-	{
-		if (Color::$verbose === TRUE)
-			print($this . " destructed.\n");
-	}
 	function add(Color $color)
 	{
 		$red	= $this->red + $color->red;
@@ -59,6 +54,11 @@ class Color
 	{
 		$str = sprintf("Color( red: %3d, green: %3d, blue: %3d )", $this->red, $this->green, $this->blue);
 		return ($str);
+	}
+	public function __destruct()
+	{
+		if (Color::$verbose === TRUE)
+			print($this . " destructed.\n");
 	}
 }
 ?>

@@ -11,9 +11,9 @@ class Vertex
 	private $_color;
 	static $verbose=FALSE;
 
-	public function getX(){ return $this->_x; }
-	public function getY(){ return $this->_y; }
-	public function getZ(){ return $this->_z; }
+	public function getX(){ return $this->_x;}
+	public function getY(){ return $this->_y;}
+	public function getZ(){ return $this->_z;}
 	public function getW(){ return $this->_w; }
 	public function setX($x){ $this->_x=$s ;}
 	public function setY($y){ $this->_y=$y ;}
