@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>balloon</title>
+		<style>
+			body
+			{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+			#circle
+			{
+				background-color: red;
+				height: 200px;
+				width: 200px;
+				border-radius: 50%;
+				transition: 0.3s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="circle"></div>
+		<script>
+			let div = document.createElement('div');
+			let c = document.getElementById('circle');
+			let colors = ['red', 'green', 'blue'];
+			let n_color = 0;
+			let hw = 200;
+
+			c.onclick = function() {
+				n_color = n_color < 2 ? n_color + 1: 0;
+				hw += 10;
+				if (hw > 420)
+					hw = 200;
+				c.style.height = hw + 'px';
+				c.style.width = hw + 'px';
+				c.style.backgroundColor = colors[n_color];
+			}
+			c.onmouseout = function() {
+				n_color = n_color > 0 ? n_color - 1: 2;
+				if ((hw - 5) >= 200)
+					hw -= 5;
+				c.style.width = hw + 'px';
+				c.style.height = hw + 'px';
+				c.style.backgroundColor = colors[n_color];
+			}
+		</script>
+	</body>
+</html>

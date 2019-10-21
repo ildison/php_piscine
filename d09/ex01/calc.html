@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>calc</title>
+		<style>
+			body {
+				top: 50%;
+				left: 50%;
+				position: fixed;
+				transform: translate(-50%, -50%);
+				background: black;
+			}
+			div {
+				display: flex;
+				flex-direction: row;
+			}
+			.text {
+				font-size: 15px;
+				height: 25px;
+			}
+			.button {
+				transform: scale(1.8);
+				margin: auto;
+				margin-left: 25px;
+			}
+		</style>
+		<script>
+			setInterval(function(){alert("Please, use me...");}, 30000);
+			function calc() {
+				var num1;
+				var num2;
+				var oper;
+				var result;
+				const ERROR = 'Error :(';
+				const DIVISION_BY_ZERO = 'It’s over 9000!';
+
+				num1 = document.getElementById('num1').value;
+				num2 = document.getElementById('num2').value;
+				oper = document.getElementById('operator').value;
+				if (num1 != (num1 = parseInt(num1)) || num2 != (num2 = parseInt(num2)) || num1 < 0 || num2 < 0)
+					result = ERROR;
+				else if ((oper == '/' || oper == '%') && num2 == 0)
+					result = DIVISION_BY_ZERO;
+				else if (oper == '+')
+					result = num1 + num2;
+				else if (oper == '-')
+					result = num1 - num2;
+				else if (oper == '*')
+					result = num1 * num2;
+				else if (oper == '/')
+					result = num1 / num2;
+				else if (oper == '%')
+					result = num1 / num2;
+				if (result == DIVISION_BY_ZERO)
+					console.log(DIVISION_BY_ZERO);
+				alert(result);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<input class='text' id='num1' type="text" value="" placeholder="number 1"/>
+			<select style="height: 30px" class="text" id="operator">
+				<option>+</option>
+				<option>-</option>
+				<option>*</option>
+				<option>/</option>
+				<option>%</option>
+			</select>
+			<input class="text" id='num2' type="text" value="" placeholder="number 2"/>
+			<input class="button" type="button" onclick="calc()" value="Try me!"/>
+		</div>
+	</body>
+</html>

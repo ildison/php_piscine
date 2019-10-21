@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>To do</title>
+		<style>
+		body {
+			top: 30%;
+			left: 50%;
+			position: fixed;
+			transform: translate(-50%, -50%);
+		}
+		#ft_list {
+			width: 400px;
+			background: white;
+			display: flex;
+			flex-direction: column;
+		}
+		.new {
+			display: flex;
+			flex-direction: row;
+		}
+		.text {
+			font-size: 15px;
+			height: 25px;
+			width: 330px;
+		}
+		.button {
+			transform: scale(1.5);
+			margin: auto;
+		}
+		</style>
+		<script src='todo.js'></script>
+	</head>
+	<body onload='come()' onbeforeunload='bay()'>
+		<input class="button" onclick="add_todo()" type="button" value="New"/>
+		<div id="ft_list">
+		</div>
+	</body>
+</html>
