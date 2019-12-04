@@ -3,9 +3,8 @@
 
 if ($argc > 1)
 {
-	$str = preg_replace("/[\s]+/", " ", trim($argv[1], " "));
-	if ($str)
-		echo $str."\n";
+	$str = preg_replace("/[' ']+/", " ", trim($argv[1], " "));
+	echo $str. PHP_EOL;
 }
 
 ?>
