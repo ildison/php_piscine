@@ -8,3 +8,5 @@ function ft_split($str)
 }
 
 ?>
+
+"      Hello,  	   a    				   how do you       do ?    "
