@@ -8,13 +8,8 @@ if ($argc > 1)
 	while (--$i)
 		$array = array_merge($array, preg_split("/[\s]+/", trim($argv[$i], " ")));
 	sort($array);
-	$n = count($array);
-	while ($i < $n)
-	{
-		if ($array[$i])
-			print $array[$i]."\n";
-		++$i;
-	}
+	foreach ($array as $arr)
+		echo $arr . PHP_EOL;
 }
 
 ?>
