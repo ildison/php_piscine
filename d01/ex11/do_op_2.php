@@ -18,7 +18,8 @@ function do_op($doop)
 
 function pars_args($av)
 {
-	$split = preg_split("/[\s]+/", trim($av));
+	$av = trim($av);
+	$split = preg_split("/[\s]+/", $av);
 	if (count($split) == 2 || count($split) > 3 || $av === "")
 		return (0);
 	if (count($split) == 3)
