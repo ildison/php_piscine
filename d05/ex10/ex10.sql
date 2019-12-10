@@ -1,3 +1,9 @@
-SELECT `title` as `Title`, `summary` as `Summary`, prod_year FROM `film` f, `genre` g
-	WHERE f.id_genre=g.id_genre AND g.name='erotic'
-		ORDER BY prod_year DESC;
+SELECT
+	film.title AS 'Title',
+	film.summary AS 'Summary',
+	film.prod_year
+FROM film, genre
+WHERE
+	film.id_genre = genre.id_genre
+	AND	genre.name = 'erotic'
+ORDER BY prod_year DESC;
