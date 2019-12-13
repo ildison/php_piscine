@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>calc</title>
+		<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+		<style>
+			body {
+				top: 50%;
+				left: 50%;
+				position: fixed;
+				transform: translate(-50%, -50%);
+				background: black;
+			}
+			div {
+				display: flex;
+				flex-direction: row;
+			}
+			.text {
+				font-size: 15px;
+				height: 25px;
+			}
+			.button {
+				transform: scale(1.8);
+				margin: auto;
+				margin-left: 25px;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+            	calc = $('#calc');
+            	left = $('#num1');
+            	right = $('#num2');
+            	op = $('#operator');
+            	calc.submit(submit);
+            	setInterval("alert('Please, use me...')", 30000);
+       		});
+			function submit(event) {
+				event.preventDefault();
+				var num1 = Number(left.val());;
+				var num2 = Number(right.val());;
+				var oper = op.val();
+				var result;
+				const ERROR = 'Error :(';
+				const DIVISION_BY_ZERO = 'It’s over 9000!';
+
+				if (num1 != (num1 = parseInt(num1)) || num2 != (num2 = parseInt(num2)) || num1 < 0 || num2 < 0)
+					result = ERROR;
+				else if ((oper == '/' || oper == '%') && num2 == 0)
+					result = DIVISION_BY_ZERO;
+				else if (oper == '+')
+					result = num1 + num2;
+				else if (oper == '-')
+					result = num1 - num2;
+				else if (oper == '*')
+					result = num1 * num2;
+				else if (oper == '/')
+					result = num1 / num2;
+				else if (oper == '%')
+					result = num1 / num2;
+				if (result == DIVISION_BY_ZERO)
+					console.log(DIVISION_BY_ZERO);
+				alert(result);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<form action="" id="calc">
+				<input class='text' id='num1' type="text" value="" placeholder="number 1"/>
+				<select style="height: 30px" class="text" id="operator">
+					<option>+</option>
+					<option>-</option>
+					<option>*</option>
+					<option>/</option>
+					<option>%</option>
+				</select>
+				<input class="text" id='num2' type="text" value="" placeholder="number 2"/>
+				<input class="button" type="submit" value="Try me!"/>
+			</form>
+		</div>
+	</body>
+</html>

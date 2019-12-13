@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>balloon</title>
+		<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+		<style>
+			body
+			{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+			#circle
+			{
+				background-color: red;
+				height: 200px;
+				width: 200px;
+				border-radius: 50%;
+				transition: 0.3s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="circle"></div>
+		<script>
+        	$(document).ready(function(){
+        	    balloon = $('#circle');
+        	    balloon.click(click);
+        	    balloon.mouseleave(onmouseout);
+        	})
+			let colors = ['red', 'green', 'blue'];
+			let n_color = 0;
+			let hw = 200;
+
+			function click() {
+				n_color = n_color < 2 ? n_color + 1: 0;
+				hw += 10;
+				if (hw > 420)
+					hw = 200;
+				balloonRefresh(n_color);
+			}
+			function onmouseout() {
+				n_color = n_color > 0 ? n_color - 1: 2;
+				if ((hw - 5) >= 200)
+					hw -= 5;
+				balloonRefresh(n_color);
+			}
+			function balloonRefresh(n_color){
+           		balloon.css('height', hw);
+           		balloon.css('width', hw);
+           		balloon.css('backgroundColor', colors[n_color]);
+       		}
+		</script>
+	</body>
+</html>
